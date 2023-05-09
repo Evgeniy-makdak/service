@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    font-style: normal;
+    font-weight: normal;
+    src: local('TT Lakes'),
+        url("/applications/fonts/TTLakes/TTLakes-Regular.ttf");
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    font-style: normal;
+    font-weight: bold;
+    src: local('TT Lakes'),
+        url("/applications/fonts/TTLakes/TTLakes-Bold.woff");
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+body {
+    font-family: 'TT Lakes', sans-serif;
+}
+
+.univers-nav__burger {
+    background-image: url("/applications/images/burger.svg");
+    display: none;
+}
+
+.univers-nav__divider {
+    background-image: url("/applications/images/divider.svg");
+    display: none;
+}
+
+.univers-nav__list,
+.univers-nav__mail {
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.univers-nav__menu {
+    margin: 38px auto 240px 24px;
+}
+
+.univers-nav__list>li {
+    margin-bottom: 28px;
+}
+
+.univers-nav__list:hover {
+    color: #7E7E82;
+}
+
+.univers-nav__rigth-icons {
+    display: none;
+}
+
+.univers-nav__phone {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+}
+
+.univers-nav__hight-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 306px;
+    padding: 30px 30px 0 22px;
+    box-sizing: border-box;
+}
+
+.univers-nav__three-icons {
+    display: flex;
+    width: 152px;
+    justify-content: space-between;
+    margin: 0 auto 0 20px;
+}
+
+.univers-nav__mail {
+    margin: 16px auto 0 20px;
+}
+
+.univers-nav__phone {
+    margin: 12px auto 0 20px;
+}
+
+.univers-nav__language {
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto 0 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1439px) {
+    .univers-nav {
+        display: flex;
+        padding-top: 18px;
+    }
+
+    .univers-nav__burger,
+    .univers-nav__divider,
+    .univers-nav__rigth-icons {
+        display: block;
+    }
+
+    .univers-nav__burger {
+        margin: 6px 20px 24px 24px;
+        cursor: pointer;
+    }
+
+    .univers-nav__trademark {
+        margin: 0 0 18px 20px;
+    }
+
+    .univers-nav__divider {
+        height: 32px;
+        margin-top: 10px;
+    }
+
+    .univers-nav__phone {
+        margin: 0 16px 24px 0;
+    }
+
+    .univers-nav__rigth-icons {
+        display: flex;
+        width: 96px;
+        margin: -48px 24px 0 20px;
+    }
+
+    .univers-nav__language,
+    .univers-nav__phone,
+    .univers-nav__mail,
+    .univers-nav__search,
+    .univers-nav__menu {
+        display: none;
+    }
+
+    .univers-nav__hight-icons {
+        max-width: 180px;
+        margin: 0 auto 24px 24px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .univers-nav__three-icons {
+        margin: -48px 20px 0 auto;
+
+    }
+
+    .univers-nav__three-icons>img,
+    .univers-nav__rigth-icons>img {
+        margin-right: 16px;
+    }
+}
