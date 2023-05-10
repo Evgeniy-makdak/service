@@ -25,6 +25,12 @@
 
 body {
     font-family: 'TT Lakes', sans-serif;
+    background: #F8F8F8;
+}
+
+.univers-nav {
+    max-width: 306px;
+    background: #FFFFFF;
 }
 
 .univers-nav__burger {
@@ -75,7 +81,6 @@ body {
     justify-content: space-between;
     max-width: 306px;
     padding: 30px 30px 0 22px;
-    box-sizing: border-box;
 }
 
 .univers-nav__three-icons {
@@ -104,6 +109,8 @@ body {
     .univers-nav {
         display: flex;
         padding-top: 18px;
+        max-width: 768px;
+        margin: 0 auto;
     }
 
     .univers-nav__burger,
@@ -113,17 +120,12 @@ body {
     }
 
     .univers-nav__burger {
-        margin: 6px 20px 24px 24px;
+        margin: 6px 20px 0 0;
         cursor: pointer;
     }
 
     .univers-nav__trademark {
-        margin: 0 0 18px 20px;
-    }
-
-    .univers-nav__divider {
-        height: 32px;
-        margin-top: 10px;
+        margin: 0 0 0 20px;
     }
 
     .univers-nav__phone {
@@ -133,7 +135,7 @@ body {
     .univers-nav__rigth-icons {
         display: flex;
         width: 96px;
-        margin: -48px 24px 0 20px;
+        margin: 0 24px 24px 20px;
     }
 
     .univers-nav__language,
@@ -146,18 +148,22 @@ body {
 
     .univers-nav__hight-icons {
         max-width: 180px;
-        margin: 0 auto 24px 24px;
+        margin: 0 0 24px 24px;
         box-sizing: border-box;
         padding: 0;
     }
 
     .univers-nav__three-icons {
-        margin: -48px 20px 0 auto;
+        margin: 0 20px 24px auto;
 
     }
 
     .univers-nav__three-icons>img,
     .univers-nav__rigth-icons>img {
         margin-right: 16px;
+    }
+
+    .univers-nav__three-icons .univers-nav__divider {
+        margin-left: 4px;
     }
 }
