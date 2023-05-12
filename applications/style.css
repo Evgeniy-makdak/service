@@ -28,8 +28,57 @@ body {
     background: #F8F8F8;
 }
 
+.content {
+    display: flex;
+}
+
+h1 {
+    display: inline-block;
+}
+
+.main-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1120px;
+    height: 578px;
+    margin: 42px 30px 0 36px;
+}
+
+.main-content__univers-nav__rigth-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* .brands {
+    position: absolute;
+    top: 618px;
+    right: 32px;
+} */
+
+.main-content__univers-nav__rigth-icons img {
+    margin-right: 32px;
+}
+
+.main-content__univers-nav__rigth-icons p {
+    margin-right: 8px;
+}
+
+
+.main-content__nav {
+    display: flex;
+}
+
+.main-content__univers-nav__rigth-icons img,
+.main-content__univers-nav__rigth-icons p {
+    display: inline-block;
+}
+
 .univers-nav {
-    max-width: 306px;
+    width: 306px;
     background: #FFFFFF;
 }
 
@@ -105,11 +154,81 @@ body {
     margin: 40px auto 0 20px;
 }
 
+.brands {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    position: relative;
+    top: -324px;
+    gap: 20px 32px;
+    margin-left: 338px;
+}
+
+.brand {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+.button {
+    position: relative;
+    top: -324px;
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    margin-left: 338px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.button span {
+    transition: all 0.3s ease;
+    margin-left: 16px;
+}
+
+#toggle-btn {
+    margin-left: -999px;
+}
+
+#toggle-btn:checked+.button span {
+    display: none;
+}
+
+#toggle-btn:checked+.button::before {
+    content: attr(data-hide-text);
+    margin-right: -80px;
+}
+
+.closed {
+    display: none;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1439px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .brands {
+        grid-template-columns: repeat(3, 240px);
+        margin: 0 auto;
+    }
+
+    .button {
+        margin-left: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
     .univers-nav {
         display: flex;
         padding-top: 18px;
-        max-width: 768px;
+        width: 768px;
         margin: 0 auto;
     }
 
@@ -135,14 +254,15 @@ body {
     .univers-nav__rigth-icons {
         display: flex;
         width: 96px;
-        margin: 0 24px 24px 20px;
+        margin: 6px 24px 24px 20px;
     }
 
     .univers-nav__language,
     .univers-nav__phone,
     .univers-nav__mail,
     .univers-nav__search,
-    .univers-nav__menu {
+    .univers-nav__menu,
+    .main-content__univers-nav__rigth-icons {
         display: none;
     }
 
@@ -154,7 +274,7 @@ body {
     }
 
     .univers-nav__three-icons {
-        margin: 0 20px 24px auto;
+        margin: 6px 20px 24px auto;
 
     }
 
@@ -166,4 +286,23 @@ body {
     .univers-nav__three-icons .univers-nav__divider {
         margin-left: 4px;
     }
+
+    .univers-nav__menu,
+    .univers-nav__hight-icons .univers-nav__search {
+        display: none;
+    }
+
+    .univers-nav__hight-icons img,
+    .univers-nav__three-icons img,
+    .univers-nav__rigth-icons img,
+    .univers-nav__language a {
+        display: block;
+
+    }
+}
+
+.univers-nav__menu.open {
+    display: block;
+    width: 320px;
+    height: 1024px;
 }
